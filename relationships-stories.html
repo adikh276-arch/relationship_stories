@@ -76,8 +76,30 @@
 </head>
 <body>
 <nav>
-  <div class="nav-logo" id="navLogo" onclick="showHero()">Relationship Mental Health</div>
-  <div class="nav-tag">Mental Health</div>
+  <div class="nav-logo" id="navLogo" onclick="showHero()" data-i18n="relationship_mental_">Relationship Mental Health</div>
+  <div class="nav-tag" data-i18n="mental_health">Mental Health</div>
+<select id="lang-selector" onchange="changeLang(this.value)" style="margin-left:auto; z-index:99; background:white; padding:5px; border-radius:5px; border:1px solid #ccc;">
+<option value="en">English</option>
+<option value="es">Español</option>
+<option value="fr">Français</option>
+<option value="de">Deutsch</option>
+<option value="hi">हिन्दी</option>
+<option value="ja">日本語</option>
+<option value="zh">中文</option>
+<option value="ko">한국어</option>
+<option value="ru">Русский</option>
+<option value="it">Italiano</option>
+<option value="pt">Português</option>
+<option value="ar">العربية</option>
+<option value="tr">Türkçe</option>
+<option value="nl">Nederlands</option>
+<option value="pl">Polski</option>
+<option value="vi">Tiếng Việt</option>
+<option value="th">ไทย</option>
+<option value="sv">Svenska</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="fil">Filipino</option>
+</select>
 </nav>
 
 <section id="hero">
@@ -87,21 +109,21 @@
     <div class="orb orb3"></div>
   </div>
   <div class="hero-badge"><span class="badge-dot"></span> Real Stories · Real Connections</div>
-  <h1 class="hero-title">Love Takes <em>Work & Honesty</em></h1>
-  <p class="hero-sub">Healthy relationships are built on communication, boundaries, and mutual respect. These are stories of people learning what that means.</p>
-  <p class="hero-quote">"The greatest glory in living lies not in never falling, but in rising every time we fall." — Nelson Mandela</p>
-  <button class="cta-btn" onclick="showStories()">Read Their Stories →</button>
+  <h1 class="hero-title" data-i18n="love_takes_work___ho">Love Takes <em>Work & Honesty</em></h1>
+  <p class="hero-sub" data-i18n="healthy_relationship">Healthy relationships are built on communication, boundaries, and mutual respect. These are stories of people learning what that means.</p>
+  <p class="hero-quote" data-i18n="_the_greatest_glory_">"The greatest glory in living lies not in never falling, but in rising every time we fall." — Nelson Mandela</p>
+  <button class="cta-btn" onclick="showStories()" data-i18n="read_their_stories__">Read Their Stories →</button>
   <div class="hero-stats">
-    <div class="stat"><div class="stat-num">50%</div><div class="stat-label">Seek Couples Help</div></div>
-    <div class="stat"><div class="stat-num">6</div><div class="stat-label">Stories Shared</div></div>
-    <div class="stat"><div class="stat-num">Growth</div><div class="stat-label">Is Possible</div></div>
+    <div class="stat"><div class="stat-num">50%</div><div class="stat-label" data-i18n="seek_couples_help">Seek Couples Help</div></div>
+    <div class="stat"><div class="stat-num">6</div><div class="stat-label" data-i18n="stories_shared">Stories Shared</div></div>
+    <div class="stat"><div class="stat-num">Growth</div><div class="stat-label" data-i18n="is_possible">Is Possible</div></div>
   </div>
 </section>
 
 <section id="stories-list">
   <div class="list-header">
-    <h2>Stories of Relationships</h2>
-    <p>Every relationship is a mirror. These stories are from people learning to see themselves clearly.</p>
+    <h2 data-i18n="list-head">Stories of Relationships</h2>
+    <p data-i18n="list-sub">Every relationship is a mirror. These stories are from people learning to see themselves clearly.</p>
   </div>
   <div class="cards-grid" id="cardsContainer"></div>
 </section>
@@ -283,5 +305,6 @@ function showStory(index) {
 
 showHero();
 </script>
+<script src="/i18n/loader.js"></script>
 </body>
 </html>
