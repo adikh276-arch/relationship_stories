@@ -16,7 +16,7 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--ink); min-height: 100vh; overflow-x: hidden; }
 
-  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--primary-mid); }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; background: rgba(255,107,157,0.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--primary-mid); }
   .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--primary); display: none; cursor: pointer; }
   .nav-logo.visible { display: block; }
   .nav-tag { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; background: var(--primary); color: white; padding: 4px 12px; border-radius: 100px; }
@@ -55,7 +55,7 @@
   .card-body { padding: 1.4rem 1.6rem; flex: 1; }
   .card-top { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.8rem; }
   .card-avatar { width: 52px; height: 52px; border-radius: 50%; overflow: hidden; border: 2.5px solid var(--primary); flex-shrink: 0; }
-  .card-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .card-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
   .card-name { font-weight: 600; font-size: 1rem; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
   .card-tag { font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 100px; background: var(--primary-light); color: var(--primary); }
   .card-quote { font-size: 0.92rem; color: #be185d; font-style: italic; line-height: 1.6; }
@@ -65,7 +65,7 @@
   .story-name-large { font-family: 'DM Serif Display', serif; font-size: 2.4rem; margin-bottom: 0.5rem; }
   .story-identity-badge { display: inline-block; font-size: 0.78rem; font-weight: 600; padding: 5px 14px; border-radius: 100px; border: 1.5px solid; margin-bottom: 2rem; }
   .portrait-wrap { width: 100%; height: 340px; border-radius: 20px; overflow: hidden; margin-bottom: 2rem; background: var(--primary-light); }
-  .portrait-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .portrait-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
   .story-body p { font-size: 1.05rem; line-height: 1.85; color: #be185d; margin-bottom: 1.4rem; }
   .story-highlight { border-left: 4px solid; padding: 1.2rem 1.5rem; border-radius: 0 12px 12px 0; font-size: 1.05rem; font-style: italic; font-weight: 500; line-height: 1.7; margin: 2rem 0; }
   .story-takeaway { border: 1.5px solid; border-radius: 16px; padding: 1.4rem 1.6rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.75; color: #be185d; }
@@ -116,15 +116,15 @@ const COLOR = {
   tagBg: "#FBCFE8",
   tagText: "#FF6B9D",
   hlBg: "#FBCFE8",
-  takeBg: "rgba(255,255,255,0.8)",
+  takeBg: "rgba(255,107,157,0.8)",
   border: "#FF6B9D"
 };
 
 const stories = [
   {
     name: "Sarah & James", age: "28 & 30", identity: "Learning Communication",
-    avatar_url: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1528892952291-009c663ce843?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1528892952291-009c663ce843?w=800&h=500&fit=crop",
     quote: "We loved each other but we couldn't talk to each other.",
     story: [
       "We met and it was fast and intense and easy. We fell in love quickly. We moved in together, got engaged, built a life. And somewhere in the middle of that, we stopped being able to have real conversations.",
@@ -138,8 +138,8 @@ const stories = [
   },
   {
     name: "Michael", age: 35, identity: "Leaving Toxicity",
-    avatar_url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&h=500&fit=crop",
     quote: "I didn't realise I was trapped until I started trying to leave.",
     story: [
       "Toxic relationships don't usually announce themselves as such. They develop slowly, through small erosions of respect and safety. By the time you realise something is wrong, you've often lost the ability to trust your own perception.",
@@ -153,8 +153,8 @@ const stories = [
   },
   {
     name: "Priya", age: 29, identity: "Codependency & Boundaries",
-    avatar_url: "https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=500&fit=crop",
     quote: "I disappeared inside my relationship, and it nearly destroyed me.",
     story: [
       "Codependency is loving someone so much that you lose yourself in the process. It's rearranging your entire life around their needs. It's apologising for things that aren't your fault. It's sacrificing your own wellbeing for someone else's.",
@@ -168,8 +168,8 @@ const stories = [
   },
   {
     name: "David & Alex", age: "32 & 34", identity: "Coming Out Together",
-    avatar_url: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=800&h=500&fit=crop",
     quote: "Our relationship became real when we could finally be honest about who we are.",
     story: [
       "We met at work and there was an immediate spark. We became close friends first, which allowed us to build real connection before we tried to navigate the complexity of attraction, identity, and fear.",
@@ -183,8 +183,8 @@ const stories = [
   },
   {
     name: "Emma", age: 27, identity: "Healing from Betrayal",
-    avatar_url: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&h=500&fit=crop",
     quote: "He lied, and I had to rebuild my ability to trust.",
     story: [
       "Betrayal in a relationship is a particular kind of painful because it destabilises not just the relationship but your sense of reality. If someone you trusted completely lied to you, what else have they lied about? Who are they? Who were you, trusting them so completely?",
@@ -198,8 +198,8 @@ const stories = [
   },
   {
     name: "Lisa", age: 31, identity: "Solo & Content",
-    avatar_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=500&fit=crop",
     quote: "I thought I needed a partner to be happy. It turned out I needed myself.",
     story: [
       "I spent my twenties in serial monogamous relationships. I would end one relationship and quickly start another. The space in between was terrifying. I didn't know who I was outside of a relationship. Being single felt like failure.",
@@ -271,8 +271,8 @@ function showStory(index) {
     <span class="story-identity-badge" style="background:#FBCFE8;color:#FF6B9D;border-color:#FF6B9D">${s.identity}</span>
     <div class="portrait-wrap"><img src="${s.portrait_url}" alt="${s.name}"/></div>
     <div class="story-body">${storyParas}</div>
-    <div class="story-highlight" style="border-color:#FF6B9D;background:#FBCFE8;color:#831843">"${s.highlight}"</div>
-    <div class="story-takeaway" style="border-color:#FF6B9D;background:rgba(255,255,255,0.8)">
+    <div class="story-highlight" style="border-color:#FF6B9D;background:#FBCFE8;color:#FF6B9D">"${s.highlight}"</div>
+    <div class="story-takeaway" style="border-color:#FF6B9D;background:rgba(255,107,157,0.8)">
       <span class="takeaway-label" style="color:#FF6B9D">💕 Something to sit with</span>
       ${s.takeaway}
     </div>
